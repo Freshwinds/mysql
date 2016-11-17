@@ -18,7 +18,7 @@ create database 数据库名 character set gbk;
 use 数据库名;
 create table 表名(
 
-    名字 数据类型
+    列名 数据类型
 
 );
 
@@ -33,6 +33,22 @@ CHARACTER SET name	指定一个字符集
 
 
 insert [into] 表名 [(列名1, 列名2, 列名3, ...)] values (值1, 值2, 值3, ...);
+select 列名称 from 表名称 (查询条件);   (*:通配符)  (where+特定条件)
+update 表名称 set 列名称=新值 where 更新条件;
+delete from 表名称 where 删除条件;
+
+创建表后的修改：
+
+添加列：alter table 表名 add 列名 列数据类型 [after 插入位置];  默认插在最后
+改变列:alter table 表名 change 列名称 列新名称 新数据类型;
+删除列:alter table 表名 drop 列名称;
+重新命名:alter table 表名 rename 新表名;
+删表:drop table 表名;
+删数据库:drop database 数据库名字;
+
+
+
+
 
 
 使用 show tables; 命令可查看已创建了表的名称; 2. 使用 describe 表名; 命令可查看已创建的表的详细信息。（）

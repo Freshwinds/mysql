@@ -1,0 +1,39 @@
+# mysql
+net start 
+
+net stop
+
+sc delete 
+
+mysql数据类型：
+整数: tinyint(1)、smallint（2）、mediumint（3）、int（4）、bigint（8）  (字节)
+浮点数: float(m,d)、double（m,d）、real、decimal  （总位数，小数位数）
+日期和时间: date、time、datetime、timestamp、year
+字符串: char、varchar(固定长度)
+文本: tinytext、text、mediumtext、longtext
+二进制(可用来存储图片、音乐等): tinyblob、blob、mediumblob、longblo
+
+
+create database 数据库名 character set gbk;
+use 数据库名;
+create table 表名(
+
+    名字 数据类型
+
+);
+
+常用的数据属性：
+NULL	数据列可包含NULL值
+NOT NULL	数据列不允许包含NULL值
+DEFAULT	默认值
+PRIMARY KEY	主键
+AUTO_INCREMENT	自动递增，适用于整数类型
+UNSIGNED	无符号
+CHARACTER SET name	指定一个字符集
+
+
+insert [into] 表名 [(列名1, 列名2, 列名3, ...)] values (值1, 值2, 值3, ...);
+
+
+使用 show tables; 命令可查看已创建了表的名称; 2. 使用 describe 表名; 命令可查看已创建的表的详细信息。（）
+
